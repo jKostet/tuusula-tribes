@@ -146,10 +146,13 @@ ul {
 
   justify-self: center;
   align-self: center;
+
+  margin-top: 10%;
 }
 
 .pageTitle h1 {
   color: var(--secondary-text);
+  font-size: 3em;
 }
 
 h1, h2 {
@@ -160,11 +163,19 @@ h1, h2 {
   font-family: 'Montserrat', sans-serif;
 }
 
+p {
+  text-align: justify;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
 .pageContent {
   width: 80%;
-  margin: 10%;
+  margin: 2% 10% 5% 10%;
 
-  border: 1px solid var(--highlight);
+
+/*  border: 1px solid var(--highlight);
+*/
 }
 
 .hidden {
@@ -181,10 +192,28 @@ h1, h2 {
   grid-area: tribeImage;
 }
 
-/* smaller round icon */
-.tribeIcon {
-  border-radius: 50%;
+#tribeIconContainer {
+  text-align: center;
 }
+
+.tribeIcon {
+
+}
+
+#openApply {
+  height: 100%;;
+  width: 200px;
+
+  background-color: white;
+  border: 2px solid var(--secondary-text);
+}
+
+#openApply:hover {
+  transform: rotate(1deg);
+  border: 5px solid var(--highlight);
+}
+
+
 
 img {
   border: solid 1px white;
