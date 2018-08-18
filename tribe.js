@@ -1,3 +1,15 @@
+var applyButton = document.getElementById("openApply");
+applyButton.type = "button";
+applyButton.addEventListener('click', function() {
+  hideUnhide("applyForm");
+})
+
+function openApplyForm() {
+  console.log("pls");
+  hideUnhide("applyForm");
+}
+
+
 function loadContent(content) {
   var content = content;
   var tribeElement;
@@ -20,8 +32,8 @@ function loadContent(content) {
     case "who":
 
       break;
-    case "apply"
-      hideUnhide(document.getElementById("applyForm"));
+    case "apply":
+      hideUnhide(document.getElementById("applyForm"))
       break;
     default:
 
@@ -33,7 +45,7 @@ function hideUnhide(element) {
   var element = document.getElementById(element);
   var elementClassList = element.classList;
 
-  if elementClassList.contains("hidden") {
+  if (elementClassList.contains("hidden")) {
     elementClassList.remove("hidden");
   } else {
     elementClassList.add("hidden");
