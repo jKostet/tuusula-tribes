@@ -4,41 +4,97 @@
     --highlight: rgb(158, 255, 149);
 }
 
+.background-image {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
 
-body {
-
-  background-color: rgb(255, 255, 255);
-
-  /*
-  background-image: url("ympyratalo.jpg");
+  background-image: url('img/bg.jpeg');
+  background-repeat: no-repeat;
   background-size: 100%;
-  */
+  width: 100vw;
+  height: 100vh;
+
+  filter:
+    brightness(120%)
+    grayscale(40%)
+  ;
 }
 
+body {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  margin-left: 20px;
+  margin-right: 20px;
 
+  background-color: rgb(255, 255, 255);
+  height: 100vh;
+}
+
+.pageContent {
+  grid-area: pageContent;
+  display: grid;
+
+  /*
+  grid-template-areas:
+    "tribeDescription tribeImage tribeImage";
+  */
+  grid-gap: 1em;
+}
 
 .gridContainer {
   display: grid;
   grid-template-columns: 3fr 2fr 2fr;
+
   grid-template-areas:
     "pageTitle pageTitle pageTitle"
     "navbar navbar navbar"
-    "tribeDescription tribeImage tribeImage";
+    "pageContent pageContent pageContent"
+    "tribeFooter tribeFooter tribeFooter";
+
+
+  /*
+  grid-template-rows:
+    "pageTitle"
+    "navbar"
+    "pageContent"
+    "tribeFooter";
+  */
+
   grid-gap: 1em;
 
   margin: 10% 10% 10% 10%;
   background-color: white;
   border: solid 1px var(--highlight);
 
-  opacity: 0.8;
+  opacity: 0.92;
+}
+
+.navbar {
+  width: 100%;
+  height: 20px;
+  border: 1px solid var(--highlight);
+
+  justify-self: center;
+  align-self: center;
+}
+
+footer {
+  grid-area: tribeFooter;
+
+  justify-self: center;
+  align-self: center;
+}
+
+form, form * {
+  padding: 5px;
 }
 
 ul {
   list-style: none;
-}
-
-div p, li {
-  color: white;
 }
 
 .gridContainer div {
@@ -55,6 +111,23 @@ div p, li {
 
 .pageTitle h1 {
   color: var(--secondary-text);
+}
+
+h1, h2 {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.pageContent {
+  width: 80%;
+  margin: 10%;
+}
+
+.hidden {
+  display: none;
 }
 
 .tribeDescription {
@@ -75,32 +148,4 @@ footer p {
   text-align: center;
   color: rgb(95, 95, 95);
   font-size: 10px;
-}
-
-.background-image {
-  position: fixed;
-  left: 0;
-  right: 0;
-  z-index: -1;
-
-  background-image: url('backgroundImage.jpg');
-  background-repeat: no-repeat;
-  background-size: 100%;
-  width: 100vw;
-  height: 100vh;
-
-  filter:
-    hue-rotate(150deg)
-    brightness(20%)
-    grayscale(10%)
-  ;
-}
-
-body {
-  position: fixed;
-  left: 0;
-  right: 0;
-  z-index: 9999;
-  margin-left: 20px;
-  margin-right: 20px;
 }

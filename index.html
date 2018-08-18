@@ -3,8 +3,9 @@
 	<head>
 		<title>Tribes Tuusula</title>
 		<link rel="stylesheet" type="text/css" href="tribe.css" />
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c|Montserrat" rel="stylesheet">
 	</head>
-  <div class="background-image"></div>
+  <div class="background-image" alt="Background Image by @danedeaner on Unsplash.com"></div>
 	<body>
 		<div class="gridContainer">
       <div class="pageTitle">
@@ -13,21 +14,77 @@
         </h1>
       </div>
 			<div class="navbar">
-        <a href="">What</a>
-        <a href="">Why</a>
-        <a href="">Who</a>
+        <a href="" onclick="loadContent(what)">What</a>
+        <a href="" onclick="loadContent(why)">Why</a>
+        <a href="" onclick="loadContent(who)">Who</a>
 			</div>
-      <div class="tribeDescription">
-        <p>
-          a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-          <br><br>
-          The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-        </p>
+      <div class="pageContent">
+
+        <!-- LANDING CONTENT -->
+        <div class="" id="what">
+          <div class="tribeDescription">
+            <h2>
+              Vacation Your Style
+            </h2>
+            <p>
+              Join like-minded people for your vacation and feel the synergy of a tribe. Pick your preferred lifestyle and spend your vacation doing what you love. This might be your first step turning into a tribal life long term.
+            </p>
+            <h2>
+              Tribe Your Style
+            </h2>
+            <p>
+              Enjoy your neat and practical private space while benefiting from multitude various spaces that support your interests, not to mention people that you can meet and share the ideas, ideals and practicalities. You can cultivate your interest together and make them global through the network of tribes.
+            </p>
+          </div>
+          <div class="tribeImage">
+            <img src="lorempixel.com/400/400/nature">
+          </div>
+          <div>
+            <button onclick="hideUnhide(applyForm)">Apply to Tribe Tuusula</button>
+        </div>
+
+        <!-- TODO: CONTENT -->
+        <div class="hidden" id="why">
+          bar
+        </div>
+        <div class="hidden" id="who">
+          foobar
+        </div>
+
+        <!-- TRIBE APPLICATION FORM -->
+        <div class="hidden" id="applyForm">
+          <form action="/action_page.php">
+            <fieldset name="Tribe Details">
+              Tribe Area:
+              <select name="tribeArea">
+                <option value="Tuusula">Tuusula</option>
+              </select>
+              <br>
+              Tribe Type:
+              <select name="tribeType">
+                <option value="cuisine">Cuisine</option>
+                <option value="startup">Startup</option>
+              </select>
+              <br>
+              Room Type:
+              <select name="roomType">
+                <option value="solo">Solo</option>
+                <option value="couple">Couple</option>
+                <option value="family">Family</option>
+              </select>
+            </fieldset>
+            <fieldset name="Contact Details">
+              First name:<br>
+              <input type="text" name="firstname" value=""><br>
+              Last name:<br>
+              <input type="text" name="lastname" value=""><br><br>
+            </fieldset>
+            <input type="submit" value="Apply!" style="width:100%;">
+          </form>
+        </div>
       </div>
-      <div class="tribeImage">
-        <img src="http://lorempixel.com/400/400/nature">
-      </div>
-		</div>
+    </div>
+
 		<script type="text/javascript" src="tribe.js"></script>
 	</body>
   <footer>
