@@ -1,12 +1,7 @@
-var applyButton = document.getElementById("openApply");
-applyButton.type = "button";
-applyButton.addEventListener('click', function() {
-  hideUnhide("applyForm");
-})
 
 function openApplyForm() {
   console.log("pls");
-  hideUnhide("applyForm");
+  unhide("applyForm");
 }
 
 
@@ -19,21 +14,32 @@ function loadContent(content) {
 
 
   switch (content) {
-    case "what":
-      tribeElement = document.getElementById(content);
+    case 1:
+      tribeElement = document.getElementById("what");
       elementClassList = tribeElement.classList;
 
-      hideUnhide(elementClassList);
-
+      hide("why");
+      hide("peek");
+      hide("applyForm");
+      unhide("what");
       break;
-    case "why":
-
+    case 2:
+      hide("what");
+      hide("peek");
+      hide("applyForm");
+      unhide("why");
       break;
-    case "who":
-
+    case 3:
+      hide("what");
+      hide("why");
+      hide("applyForm");
+      unhide("peek");
       break;
-    case "apply":
-      hideUnhide(document.getElementById("applyForm"))
+    case 4:
+      unhide("applyForm");
+      break;
+    case 5:
+      unhide("applyForm"); // choose startup dropdown
       break;
     default:
 
@@ -41,13 +47,20 @@ function loadContent(content) {
 
 }
 
-function hideUnhide(element) {
+function hide(element) {
   var element = document.getElementById(element);
   var elementClassList = element.classList;
 
-  if (elementClassList.contains("hidden")) {
-    elementClassList.remove("hidden");
-  } else {
-    elementClassList.add("hidden");
+  if (!element.classList.contains("hidden")) {
+    element.classList.add("hidden");
+  }
+}
+
+function unhide(findElement) {
+  var element = document.getElementById(findElement);
+  var elementClassList = element.classList;
+
+  if (element.classList.contains("hidden")) {
+    element.classList.remove("hidden");
   }
 }

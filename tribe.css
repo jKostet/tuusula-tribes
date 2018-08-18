@@ -128,8 +128,21 @@ footer {
   margin: auto;
 }
 
+a {
+  color: black;
+}
+
 form, form * {
   padding: 5px;
+}
+
+submit {
+  border: 1px solid var(--highlight);
+}
+
+form {
+  width: 400px;
+  border: 1px solid var(--highlight);
 }
 
 ul {
@@ -200,7 +213,7 @@ p {
 
 }
 
-#openApply {
+.openApplyButton {
   height: 100%;;
   width: 200px;
 
@@ -208,12 +221,25 @@ p {
   border: 2px solid var(--secondary-text);
 }
 
-#openApply:hover {
+.openApplyButton:hover {
   transform: rotate(1deg);
   border: 5px solid var(--highlight);
 }
 
+.tribeFlyer {
+  width: 40%;
+  margin: 5px;
+}
 
+#peek img {
+  width: 100%;
+}
+
+.applyButtonContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 10px;
+}
 
 img {
   border: solid 1px white;

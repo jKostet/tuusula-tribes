@@ -15,66 +15,81 @@
       </div>
 			<div class="navbar">
         <div class="navbarLinks">
-          <a href="" onclick="loadContent(what)">What</a>
-          <a href="" onclick="loadContent(why)">Why</a>
-          <a href="" onclick="loadContent(who)">Who</a>
+          <a href="#" onclick="loadContent(1)">What</a>
+          <a href="#" onclick="loadContent(2)">Why</a>
+          <a href="#" onclick="loadContent(3)">Take a look</a>
         </div>
 			</div>
       <div class="pageContent">
 
-        <!-- LANDING CONTENT -->
-        <div class="" id="what">
-          <div class="tribeDescription">
-            <h2>
-              Vacation Your Style
-            </h2>
-            <p>
-              Join like-minded people for your vacation and feel the synergy of a tribe. Pick your preferred lifestyle and spend your vacation doing what you love. This might be your first step turning into a tribal life long term.
-            </p>
-            <h2>
-              Tribe Your Style
-            </h2>
-            <p>
-              Enjoy your neat and practical private space while benefiting from multitude various spaces that support your interests, not to mention people that you can meet and share the ideas, ideals and practicalities. You can cultivate your interest together and make them global through the network of tribes.
-            </p>
-            <h2>
-              Deepen Your Insight
-            </h2>
-            <p>
-              By seeing other members of the tribe you shall learn rituals and symbols used around the globe to enrich your understanding in your special interest. Also, the challenges that a close community creates do have many solutions as you will find by discussing with the other tribe members.
-            </p>
-            <h2>
-              Environment
-            </h2>
-            <p>
-              You will be staying in an area designed to your desired purpose, outdoor and indoor places that perfectly support the lifestyle of your choice.
-            </p>
-            <h2>
-              Choose Your Way
-            </h2>
-          </div>
-          <div class="tribeImage">
-            <img src="">
-          </div>
-
-          <div id="tribeOptions">
-            <p>
-              Currently we cater for two tribes, pleasure and business, cuisine and early entrepreneurship.
-            </p>
-            <div id="tribeIconContainer">
-              <img src="img/culinary_tribe.png">
-              <img src="img/startup_tribe.png">
-          </div>
-
-          <div style="text-align: center">
-            <button id="openApply">
-              <h2>
-                Apply to Tribe Tuusula
-              </h2>
-            </button>
+      <!-- LANDING CONTENT -->
+      <div class="" id="what">
+        <div class="tribeDescription">
+          <h2>
+            Vacation Your Style
+          </h2>
+          <p>
+            Join like-minded people for your vacation and feel the synergy of a tribe. Pick your preferred lifestyle and spend your vacation doing what you love. This might be your first step turning into a tribal life long term.
+          </p>
+          <h2>
+            Tribe Your Style
+          </h2>
+          <p>
+            Enjoy your neat and practical private space while benefiting from multitude various spaces that support your interests, not to mention people that you can meet and share the ideas, ideals and practicalities. You can cultivate your interest together and make them global through the network of tribes.
+          </p>
+          <h2>
+            Deepen Your Insight
+          </h2>
+          <p>
+            By seeing other members of the tribe you shall learn rituals and symbols used around the globe to enrich your understanding in your special interest. Also, the challenges that a close community creates do have many solutions as you will find by discussing with the other tribe members.
+          </p>
+          <h2>
+            Environment
+          </h2>
+          <p>
+            You will be staying in an area designed to your desired purpose, outdoor and indoor places that perfectly support the lifestyle of your choice.
+          </p>
+          <h2>
+            Choose Your Way
+          </h2>
+        </div>
+        <div class="tribeImage">
+          <img src="">
         </div>
 
-        <!-- TODO: CONTENT -->
+        <div id="tribeOptions">
+          <p>
+            Currently we cater for two tribes, pleasure and business, cuisine and early entrepreneurship.
+          </p>
+          <div id="tribeIconContainer">
+            <!--
+            <img src="img/culinary_tribe.png">
+            <img src="img/startup_tribe.png">
+            -->
+            <img class="tribeFlyer" src="img/culinary_flyer.jpg">
+            <img class="tribeFlyer" src="img/startup_flyer.jpg">
+          </div>
+
+          <div class="applyButtonContainer">
+            <div style="text-align: center; justify-self: right; padding-right: 25%;">
+              <button class="openApplyButton" id="openApply" onclick="loadContent(4)">
+                <h2>
+                  Apply to the Culinary Tribe
+                </h2>
+              </button>
+            </div>
+            <div style="text-align: center; justify-self: left; padding-left: 25%;">
+              <button class="openApplyButton" id="openApply" onclick="loadContent(5)">
+                <h2>
+                  Apply to the Startup Tribe
+                </h2>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <!-- TODO: WHY CONTENT -->
         <div class="hidden" id="why">
           <h2>
             Why Tribes?
@@ -84,9 +99,43 @@
 
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
+          <div class="">
+            <div style="text-align: center; margin-top: 5%;">
+              <button class="openApplyButton" id="openApply2" onclick="loadContent(5)">
+                <h2>
+                  Apply to the Tribe
+                </h2>
+              </button>
+            </div>
+          </div>
         </div>
-        <div class="hidden" id="who">
-          foobar
+
+        <!-- FLOOR PLANS ETC -->
+        <div class="hidden" id="peek">
+          <h2>
+            Take a peek inside our Tribal Floor Plan in Tuusula
+          </h2>
+          <br>
+          <p>
+            This chapter tells you more about the floor plan and living setup!
+
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p><br><br>
+          <img src="img/2.png">
+          <img src="img/3.png">
+          <img src="img/4.png">
+          <img src="img/5.png">
+          <img src="img/6.png">
+          <br>
+          <div class="">
+            <div style="text-align: center; margin-top: 5%;">
+              <button class="openApplyButton" id="openApply3" onclick="loadContent(5)">
+                <h2>
+                  Apply to the Tribe
+                </h2>
+              </button>
+            </div>
+          </div>
         </div>
 
         <!-- TRIBE APPLICATION FORM -->
@@ -125,7 +174,7 @@
 
 		<script type="text/javascript" src="tribe.js"></script>
 	</body>
-  <footer>
+  <footer class="hidden">
     <p style="font-size: 8px">
       Powered by Tuusula CityHack: Power People
     </p>
