@@ -1,0 +1,106 @@
+:root {
+    --primary-text: black;
+    --secondary-text: grey;
+    --highlight: rgb(158, 255, 149);
+}
+
+
+body {
+
+  background-color: rgb(255, 255, 255);
+
+  /*
+  background-image: url("ympyratalo.jpg");
+  background-size: 100%;
+  */
+}
+
+
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr;
+  grid-template-areas:
+    "pageTitle pageTitle pageTitle"
+    "navbar navbar navbar"
+    "tribeDescription tribeImage tribeImage";
+  grid-gap: 1em;
+
+  margin: 10% 10% 10% 10%;
+  background-color: white;
+  border: solid 1px var(--highlight);
+
+  opacity: 0.8;
+}
+
+ul {
+  list-style: none;
+}
+
+div p, li {
+  color: white;
+}
+
+.gridContainer div {
+  align-self: center;
+  justify-self: center;
+}
+
+.pageTitle {
+  grid-area: pageTitle;
+
+  justify-self: center;
+  align-self: center;
+}
+
+.pageTitle h1 {
+  color: var(--secondary-text);
+}
+
+.tribeDescription {
+  grid-area: questDescription;
+  width: 100%;
+
+}
+
+.tribeImage {
+  grid-area: tribeImage;
+}
+
+img {
+  border: solid 1px white;
+}
+
+footer p {
+  text-align: center;
+  color: rgb(95, 95, 95);
+  font-size: 10px;
+}
+
+.background-image {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+
+  background-image: url('backgroundImage.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100vw;
+  height: 100vh;
+
+  filter:
+    hue-rotate(150deg)
+    brightness(20%)
+    grayscale(10%)
+  ;
+}
+
+body {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  margin-left: 20px;
+  margin-right: 20px;
+}
